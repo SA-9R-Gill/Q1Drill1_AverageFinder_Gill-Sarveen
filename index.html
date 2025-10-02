@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Average Finder</title>
+
+    <!-- PyScript setup -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+            max-width: 480px;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #average, #result {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Average Finder</h1>
+
+    <label for="social"><b>Social Studies:</b></label>
+    <input id="social" type="number" min="0" max="100" placeholder="Enter Social Studies score">
+
+    <label for="math"><b>Math:</b></label>
+    <input id="math" type="number" min="0" max="100" placeholder="Enter Math score">
+
+    <label for="science"><b>Science:</b></label>
+    <input id="science" type="number" min="0" max="100" placeholder="Enter Science score">
+
+    <label for="english"><b>English:</b></label>
+    <input id="english" type="number" min="0" max="100" placeholder="Enter English score">
+
+    <label for="filipino"><b>Filipino:</b></label>
+    <input id="filipino" type="number" min="0" max="100" placeholder="Enter Filipino score">
+
+    <div class="button-container">
+        <button id="compute-btn" py-click="compute_average">Compute</button>
+        <br></br>
+        <button id="clear-btn" py-click="clear_fields">Clear</button>
+    </div>
+
+    <br></br>
+    
+    <p style="font-size: x-large;">Average: <span id="average"></span></p>
+    <p style="font-size: x-large;">Result: <span id="result"></span></p>
+
+    <!-- Python logic -->
+    <script type="py" src="main.py"></script>
+</body>
+</html>
